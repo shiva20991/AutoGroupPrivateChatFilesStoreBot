@@ -1,0 +1,100 @@
+{
+  "name": "Auto Group - Private Chat Files Store Bot",
+  "description": "This will just save your group files to a Channel & will provide a link to retrieve your file.",
+  "keywords": [
+    "telegram",
+    "group",
+    "files",
+    "store",
+    "bot",
+    "save"
+  ],
+  "repository": "https://github.com/HuzunluArtemis/AutoGroupPrivateChatFilesStoreBot",
+  "success_url": "https://github.com/HuzunluArtemis/AutoGroupPrivateChatFilesStoreBot",
+  "website": "https://github.com/HuzunluArtemis/AutoGroupPrivateChatFilesStoreBot",
+  "env": 
+  {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "telegram bot token, get it from @botfather",
+      "value": "",
+      "required": true
+    },
+    "DB_CHANNEL_ID": {
+      "description": "Your private channel id for database. In that channel bot will save files.",
+      "value": "",
+      "required": true
+    },
+    "FORCE_SUB_CHANNEL": {
+      "description": "Your channel username that you want to forcesub",
+      "value": "",
+      "required": false
+    },
+    "MONGODB_URI": {
+      "description": "Mongo database url get it from https://www.mongodb.com",
+      "value": "",
+      "required": true
+    },
+    "BLOCKED_EXTENSIONS": {
+      "description": "blocked files extension that will not get deleted.",
+      "value": "srt txt html aio pdf lnk url",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "bot username",
+      "value": "",
+      "required": true
+    },
+    "MIN_FILE_SIZE": {
+      "description": "read readme for this.",
+      "value": "0",
+      "required": false
+    },
+    "SEND_AS_COPY": {
+      "description": "read readme for this.",
+      "value": "",
+      "required": false
+    },
+    "SAVE_AS_COPY": {
+      "description": "read readme for this.",
+      "value": "",
+      "required": false
+    },
+    "CONTACT_ADRESS": {
+      "description": "read readme for this.",
+      "value": "",
+      "required": true
+    },
+    "URL_PREFIX": {
+      "description": "read readme for this.",
+      "value": "HA",
+      "required": true
+    },
+    "AUTO_DELETE": {
+      "description": "read readme for this.",
+      "value": "True",
+      "required": false
+    },
+    "AUTO_DELETE_TIME": {
+      "description": "read readme for this.",
+      "value": "10",
+      "required": true
+    },
+    "AUTO_KICK_TIME": {
+      "description": "telegram bot token, get it from @botfather ",
+      "value": "10",
+      "required": false
+    }
+  },
+  "buildpacks":[{"url": "heroku/python"}],
+  "formation":{"worker": {"quantity": 1, "size": "free"}}
+}
